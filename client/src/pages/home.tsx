@@ -16,22 +16,22 @@ export default function Home() {
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
             <img
               src="https://via.placeholder.com/128"
-              alt="Profile"
+              alt="Ảnh đại diện"
               className="w-full h-full object-cover"
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            John Doe
+            Nguyễn Văn A
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Full Stack Developer passionate about creating beautiful and functional web applications
+            Lập trình viên Full Stack với niềm đam mê tạo ra các ứng dụng web đẹp và chức năng
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild>
-              <Link href="/contact">Get in touch</Link>
+              <Link href="/contact">Liên hệ ngay</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/projects">View projects</Link>
+              <Link href="/projects">Xem dự án</Link>
             </Button>
           </div>
           <div className="flex justify-center gap-6 pt-4">
@@ -49,16 +49,16 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <h2 className="text-3xl font-bold mb-6">Về tôi</h2>
         <div className="prose prose-lg max-w-none">
           <p>
-            I'm a full stack developer with over 5 years of experience building web applications.
-            I specialize in React, Node.js, and modern web technologies. My passion lies in creating
-            user-friendly interfaces and writing clean, maintainable code.
+            Tôi là một lập trình viên full stack với hơn 5 năm kinh nghiệm xây dựng ứng dụng web.
+            Tôi chuyên về React, Node.js và các công nghệ web hiện đại. Niềm đam mê của tôi là tạo ra
+            các giao diện thân thiện với người dùng và viết mã nguồn sạch, dễ bảo trì.
           </p>
           <p>
-            When I'm not coding, you can find me contributing to open source projects, writing
-            technical blog posts, and learning new technologies.
+            Khi không code, bạn có thể tìm thấy tôi đang đóng góp cho các dự án mã nguồn mở, viết
+            các bài blog kỹ thuật và học hỏi các công nghệ mới.
           </p>
         </div>
       </section>

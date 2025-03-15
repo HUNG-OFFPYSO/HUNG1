@@ -10,10 +10,10 @@ import {
 import { useState } from "react";
 
 const LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/", label: "Trang chủ" },
+  { href: "/projects", label: "Dự án" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Liên hệ" },
 ];
 
 export default function Navbar() {
@@ -46,7 +46,7 @@ export default function Navbar() {
           <SheetTrigger asChild className="md:hidden">
             <Button variant="outline" size="icon">
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
+              <span className="sr-only">Mở menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left">

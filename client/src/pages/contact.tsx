@@ -34,15 +34,15 @@ export default function Contact() {
       apiRequest("POST", "/api/contact", data),
     onSuccess: () => {
       toast({
-        title: "Message sent",
-        description: "Thank you for your message. I'll get back to you soon!",
+        title: "Gửi tin nhắn thành công",
+        description: "Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi sớm nhất có thể!",
       });
       form.reset();
     },
     onError: () => {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
+        title: "Lỗi",
+        description: "Không thể gửi tin nhắn. Vui lòng thử lại.",
         variant: "destructive",
       });
     },
@@ -55,9 +55,9 @@ export default function Contact() {
         animate={{ opacity: 1, y: 0 }}
         className="space-y-4"
       >
-        <h1 className="text-4xl font-bold">Contact</h1>
+        <h1 className="text-4xl font-bold">Liên hệ</h1>
         <p className="text-muted-foreground text-lg">
-          Have a question or want to work together? Send me a message!
+          Bạn có câu hỏi hoặc muốn hợp tác? Hãy gửi tin nhắn cho tôi!
         </p>
       </motion.div>
 
@@ -76,9 +76,9 @@ export default function Contact() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Họ tên</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} />
+                    <Input placeholder="Nhập họ tên của bạn" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -91,7 +91,7 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="your@email.com" {...field} />
+                    <Input type="email" placeholder="email@example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,10 +102,10 @@ export default function Contact() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>Tin nhắn</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Your message"
+                      placeholder="Nhập nội dung tin nhắn"
                       className="min-h-[150px]"
                       {...field}
                     />
@@ -119,7 +119,7 @@ export default function Contact() {
               className="w-full"
               disabled={mutation.isPending}
             >
-              {mutation.isPending ? "Sending..." : "Send Message"}
+              {mutation.isPending ? "Đang gửi..." : "Gửi tin nhắn"}
             </Button>
           </form>
         </Form>

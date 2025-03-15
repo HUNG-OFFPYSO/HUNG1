@@ -12,15 +12,15 @@ export default function Projects() {
   });
 
   if (isLoading) {
-    return <div>Loading projects...</div>;
+    return <div>Đang tải dự án...</div>;
   }
 
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold">Projects</h1>
+        <h1 className="text-4xl font-bold">Dự án</h1>
         <p className="text-muted-foreground text-lg">
-          A collection of my recent work and side projects
+          Bộ sưu tập các dự án và sản phẩm gần đây của tôi
         </p>
       </div>
 
@@ -57,7 +57,7 @@ export default function Projects() {
                     <Button size="sm" variant="outline" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
-                        GitHub
+                        Mã nguồn
                       </a>
                     </Button>
                   )}
@@ -65,7 +65,7 @@ export default function Projects() {
                     <Button size="sm" asChild>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <LinkIcon className="mr-2 h-4 w-4" />
-                        Live Demo
+                        Demo
                       </a>
                     </Button>
                   )}

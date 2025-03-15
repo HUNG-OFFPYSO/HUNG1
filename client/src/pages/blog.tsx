@@ -11,7 +11,7 @@ export default function Blog() {
   });
 
   if (isLoading) {
-    return <div>Loading blog posts...</div>;
+    return <div>Đang tải bài viết...</div>;
   }
 
   return (
@@ -19,7 +19,7 @@ export default function Blog() {
       <div className="space-y-4">
         <h1 className="text-4xl font-bold">Blog</h1>
         <p className="text-muted-foreground text-lg">
-          Thoughts, tutorials and insights about web development
+          Chia sẻ kiến thức, hướng dẫn và góc nhìn về lập trình web
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default function Blog() {
               <CardHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <time className="text-sm text-muted-foreground">
-                    {format(new Date(post.publishDate), "MMMM d, yyyy")}
+                    {format(new Date(post.publishDate), "dd/MM/yyyy")}
                   </time>
                   <div className="flex gap-2">
                     {post.tags.map((tag) => (
