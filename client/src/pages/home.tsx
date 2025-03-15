@@ -31,25 +31,25 @@ export default function Home() {
               ]}
             />
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Lập trình viên Full Stack với niềm đam mê tạo ra các ứng dụng web đẹp và chức năng
           </p>
           <div className="flex justify-center gap-4">
-            <Button asChild>
+            <Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
               <Link href="/contact">Liên hệ ngay</Link>
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" asChild className="border-2 border-gradient-to-r from-blue-500 to-purple-500">
               <Link href="/projects">Xem dự án</Link>
             </Button>
           </div>
           <div className="flex justify-center gap-6 pt-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
               <Twitter className="w-6 h-6" />
             </a>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-6">Về tôi</h2>
+        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Về tôi</h2>
         <div className="prose prose-lg max-w-none">
           <p>
             Tôi là một lập trình viên full stack với hơn 5 năm kinh nghiệm xây dựng ứng dụng web.

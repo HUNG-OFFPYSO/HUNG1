@@ -17,6 +17,11 @@ export function TypedText({ strings, className }: TypedTextProps) {
       backSpeed: 50,
       loop: true,
       cursorChar: '|',
+      showCursor: true,
+      cursorBlinking: true,
+      smartBackspace: true,
+      startDelay: 500,
+      backDelay: 1000,
     };
 
     if (el.current) {
@@ -28,5 +33,10 @@ export function TypedText({ strings, className }: TypedTextProps) {
     };
   }, [strings]);
 
-  return <span ref={el} className={className} />;
+  return (
+    <span 
+      ref={el} 
+      className={`${className} animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent`}
+    />
+  );
 }
