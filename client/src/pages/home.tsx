@@ -24,10 +24,10 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             <TypedText 
               strings={[
-                "Nguyễn Văn A",
-                "Full Stack Developer",
-                "Web Designer",
-                "UI/UX Engineer"
+                "HƯNG_OFFPYSO",
+                "Python Developer",
+                "Security Researcher",
+                "Ethical Hacker"
               ]}
             />
           </h1>
@@ -61,12 +61,12 @@ export default function Home() {
         <div className="prose prose-lg max-w-none">
           <p>
             Tôi là một lập trình viên full stack với hơn 5 năm kinh nghiệm xây dựng ứng dụng web.
-            Tôi chuyên về React, Node.js và các công nghệ web hiện đại. Niềm đam mê của tôi là tạo ra
-            các giao diện thân thiện với người dùng và viết mã nguồn sạch, dễ bảo trì.
+            Tôi chuyên về Python và các công nghệ bảo mật. Niềm đam mê của tôi là tạo ra
+            các giải pháp an toàn và hiệu quả cho người dùng.
           </p>
           <p>
-            Khi không code, bạn có thể tìm thấy tôi đang đóng góp cho các dự án mã nguồn mở, viết
-            các bài blog kỹ thuật và học hỏi các công nghệ mới.
+            Khi không code, bạn có thể tìm thấy tôi đang nghiên cứu về bảo mật, tham gia các
+            cuộc thi CTF và chia sẻ kiến thức với cộng đồng.
           </p>
         </div>
       </section>
