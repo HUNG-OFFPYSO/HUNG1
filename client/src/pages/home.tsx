@@ -43,13 +43,13 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex justify-center gap-6 pt-4">
-            <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+            <a href="https://facebook.com/HUNGOFFPYSO" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
               <Facebook className="w-6 h-6" />
             </a>
-            <a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+            <a href="https://t.me/hungoffpyso" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
               <SendHorizontal className="w-6 h-6" />
             </a>
-            <a href="tel:+84123456789" className="text-blue-500 hover:text-purple-500 transition-colors">
+            <a href="tel:0559820159" className="text-blue-500 hover:text-purple-500 transition-colors">
               <Phone className="w-6 h-6" />
             </a>
           </div>
