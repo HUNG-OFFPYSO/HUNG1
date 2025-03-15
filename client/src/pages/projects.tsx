@@ -4,16 +4,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Link as LinkIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Project } from "@shared/schema";
+import type { Project, Category } from "@shared/schema";
 
 export default function Projects() {
-  const { data: projects, isLoading } = useQuery<Project[]>({
-    queryKey: ["/api/projects"],
+  const { data: categories } = useQuery<Category[]>({
+    queryKey: ["/api/categories"],
   });
 
-  if (isLoading) {
-    return <div>Đang tải dự án...</div>;
-  }
+  const projectCategories = categories?.filter(c => c.type === "project") || [];
 
   return (
     <div className="space-y-8">
@@ -24,8 +22,34 @@ export default function Projects() {
         </p>
       </div>
 
+      {projectCategories.map((category) => (
+        <ProjectCategory key={category.id} categoryId={category.id} name={category.name} />
+      ))}
+    </div>
+  );
+}
+
+function ProjectCategory({ categoryId, name }: { categoryId: number; name: string }) {
+  const { data: projects, isLoading } = useQuery<Project[]>({
+    queryKey: ["/api/projects", { category: categoryId }],
+  });
+
+  if (isLoading) {
+    return <div>Đang tải dự án...</div>;
+  }
+
+  if (!projects?.length) {
+    return null;
+  }
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent" style={{userSelect: 'none'}}>
+        {name}
+      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects?.map((project, i) => (
+        {projects.map((project, i) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
@@ -34,8 +58,8 @@ export default function Projects() {
           >
             <Card>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle style={{userSelect: 'none'}}>{project.title}</CardTitle>
+                <CardDescription style={{userSelect: 'none'}}>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="aspect-video mb-4">
@@ -47,7 +71,7 @@ export default function Projects() {
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
+                    <Badge key={tag} variant="secondary" style={{userSelect: 'none'}}>
                       {tag}
                     </Badge>
                   ))}

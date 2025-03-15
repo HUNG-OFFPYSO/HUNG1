@@ -16,13 +16,13 @@ export default function Home() {
         >
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
             <img
-              src="https://via.placeholder.com/128"
+              src="https://image3.luatvietnam.vn/uploaded/665twebp/images/original/2024/07/28/khong-gian-mang-co-vai-tro-ket-noi-cac-co-so-ha-tang-cong-nghe-thong-tin_2807172136.png"
               alt="Ảnh đại diện"
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            <TypedText 
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent" style={{userSelect: 'none'}}>
+            <TypedText
               strings={[
                 "HƯNG_OFFPYSO",
                 "Python Developer",
@@ -31,7 +31,7 @@ export default function Home() {
               ]}
             />
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent" style={{userSelect: 'none'}}>
             Lập trình viên Full Stack với niềm đam mê tạo ra các ứng dụng web đẹp và chức năng
           </p>
           <div className="flex justify-center gap-4">
@@ -57,8 +57,8 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Về tôi</h2>
-        <div className="prose prose-lg max-w-none">
+        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent" style={{userSelect: 'none'}}>Về tôi</h2>
+        <div className="prose prose-lg max-w-none" style={{userSelect: 'none'}}>
           <p>
             Tôi là một lập trình viên full stack với hơn 5 năm kinh nghiệm xây dựng ứng dụng web.
             Tôi chuyên về Python và các công nghệ bảo mật. Niềm đam mê của tôi là tạo ra
