@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { TypedText } from "@/components/ui/typed-text";
 
 export default function Home() {
   return (
@@ -21,7 +22,14 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            Nguyễn Văn A
+            <TypedText 
+              strings={[
+                "Nguyễn Văn A",
+                "Full Stack Developer",
+                "Web Designer",
+                "UI/UX Engineer"
+              ]}
+            />
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Lập trình viên Full Stack với niềm đam mê tạo ra các ứng dụng web đẹp và chức năng
