@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertMessageSchema, insertProjectSchema, insertBlogPostSchema } from "@shared/schema";
+import { setupAuth } from "./auth";
 
 const TELEGRAM_BOT_TOKEN = "7268134595:AAFQ7sM_6L_Hujlo1doc6LVuGYZRbD_sOuE";
 const TELEGRAM_CHAT_ID = ""; // Cần bổ sung chat ID
@@ -21,7 +22,17 @@ async function sendTelegramMessage(message: string) {
   });
 }
 
+function isAuthenticated(req: Express.Request, res: Express.Response, next: Express.NextFunction) {
+  if (!req.isAuthenticated()) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  next();
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Set up authentication
+  setupAuth(app);
+
   // Categories routes
   app.get("/api/categories", async (_req, res) => {
     const categories = await storage.getCategories();
@@ -46,9 +57,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json(project);
   });
 
-  app.post("/api/projects", async (req, res) => {
+  app.post("/api/projects", isAuthenticated, async (req, res) => {
     try {
-      // TODO: Check user authentication and admin rights
       const project = insertProjectSchema.parse(req.body);
       const savedProject = await storage.createProject(project);
       res.json(savedProject);
@@ -75,9 +85,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json(post);
   });
 
-  app.post("/api/blog", async (req, res) => {
+  app.post("/api/blog", isAuthenticated, async (req, res) => {
     try {
-      // TODO: Check user authentication and admin rights
       const post = insertBlogPostSchema.parse(req.body);
       const savedPost = await storage.createBlogPost(post);
       res.json(savedPost);
