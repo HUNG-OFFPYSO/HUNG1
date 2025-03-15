@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Phone, SendHorizontal } from "lucide-react";
 import { TypedText } from "@/components/ui/typed-text";
 
 export default function Home() {
@@ -43,14 +43,14 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex justify-center gap-6 pt-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
-              <Github className="w-6 h-6" />
+            <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <Facebook className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
-              <Linkedin className="w-6 h-6" />
+            <a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <SendHorizontal className="w-6 h-6" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500 transition-colors">
-              <Twitter className="w-6 h-6" />
+            <a href="tel:+84123456789" className="text-blue-500 hover:text-purple-500 transition-colors">
+              <Phone className="w-6 h-6" />
             </a>
           </div>
         </motion.div>
