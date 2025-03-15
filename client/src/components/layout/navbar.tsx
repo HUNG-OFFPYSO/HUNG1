@@ -14,6 +14,7 @@ const LINKS = [
   { href: "/projects", label: "Dự án" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Liên hệ" },
+  { href: "/admin", label: "Quản lý" },
 ];
 
 export default function Navbar() {
